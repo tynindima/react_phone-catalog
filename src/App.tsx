@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+
 import './App.css';
 import Catalog from './Catalog';
 import Details from './Details';
@@ -35,8 +37,8 @@ const App = () => (
       </div>
 
       <div className="col-md-10">
-        <Catalog />
-        <Details />
+        <Route path="/phones" exact component={Catalog} />
+        <Route path="/phones/:phoneId" component={Details} />
       </div>
     </div>
   </div>
