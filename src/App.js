@@ -35,8 +35,8 @@ const App = () => (
       </div>
 
       <div className="col-md-10">
-        <Details />
         <Catalog />
+        <Details />
       </div>
     </div>
   </div>
