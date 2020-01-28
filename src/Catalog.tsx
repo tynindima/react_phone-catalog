@@ -3,6 +3,14 @@ import React, { useState, useEffect } from 'react';
 // eslint-disable-next-line max-len
 const API_URL = 'https://mate-academy.github.io/phone-catalogue-static/api/phones.json';
 
+interface IPhone {
+  id: string;
+  name: string;
+  age: number;
+  imageUrl: string;
+  snippet: string;
+}
+
 const Catalog = () => {
   const [phones, setPhones] = useState([]);
 
@@ -17,7 +25,7 @@ const Catalog = () => {
       <h1>Phone catalog</h1>
 
       <ul className="phones">
-        {phones.map(phone => (
+        {phones.map((phone: IPhone) => (
           <li className="thumbnail">
             <a href={`#!/phones/${phone.id}`} className="thumb">
               <img alt={phone.name} src={phone.imageUrl} />
