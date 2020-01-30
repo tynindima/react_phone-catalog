@@ -1,7 +1,6 @@
 module.exports = {
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "airbnb-typescript",
     "@mate-academy/eslint-config-react",
   ],
   "plugins": [
@@ -19,7 +18,10 @@ module.exports = {
       "allowShortCircuit": true,
       "allowTernary": true
     }],
-    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": "error",
 
     // react
     "react/jsx-filename-extension": ["warn", {
