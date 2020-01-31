@@ -4,10 +4,8 @@ import { HashRouter } from 'react-router-dom';
 
 import App from './App';
 
-const baseName = process.env.REACT_APP_BASENAME || 'react_phone-catalog';
-
 ReactDOM.render(
-  <HashRouter basename={baseName}>
+  <HashRouter>
     <App />
   </HashRouter>,
   document.getElementById('root'),

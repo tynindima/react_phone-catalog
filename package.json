@@ -31,7 +31,7 @@
     "stylelint": "^13.0.0"
   },
   "scripts": {
-    "start": "REACT_APP_BASENAME=/ react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
