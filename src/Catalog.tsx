@@ -1,14 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import * as phonesApi from './api/phones';
 import * as basketItemsApi from './api/basketItems';
 
-import BasketContext from './BasketContext';
+import { useBasket } from './BasketHook';
+import { getImageUrl } from './helpers';
 
 const Catalog = () => {
   const [phones, setPhones] = useState<Phone[]>([]);
-  const { refreshBasket } = useContext(BasketContext);
+  const { refreshBasket } = useBasket();
 
   useEffect(() => {
     phonesApi.getAll()
@@ -30,7 +31,7 @@ const Catalog = () => {
             <Link to={`/phones/${phone.id}`} className="thumb">
               <img
                 alt={phone.name}
-                src={phone.imageUrl}
+                src={getImageUrl(phone.imageUrl)}
               />
             </Link>
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import * as phonesApi from './api/phones';
+import { getImageUrl } from './helpers';
 
 type TRouteParams = {
   phoneId: string;
@@ -30,7 +31,7 @@ const Details = () => {
     <>
       <img
         className="phone"
-        src={phone.images[0]}
+        src={getImageUrl(phone.images[0])}
         alt="phone preview"
       />
 
@@ -44,7 +45,7 @@ const Details = () => {
       <ul className="phone-thumbs">
         {phone.images.map(image => (
           <li key={image}>
-            <img src={image} alt="thumbnail" />
+            <img src={getImageUrl(image)} alt="thumbnail" />
           </li>
         ))}
       </ul>

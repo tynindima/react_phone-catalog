@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-import BasketContext from './BasketContext';
+import { useBasket } from './BasketHook';
 
 const Basket = () => {
-  const { basketItems, refreshBasket, removeItem } = useContext(BasketContext);
+  const { basketItems, refreshBasket, removeItem } = useBasket();
 
   useEffect(refreshBasket, []);
 
