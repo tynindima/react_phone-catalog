@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import * as phonesApi from './api/phones';
 import * as basketItemsApi from './api/basketItems';
 
-type CatalogProps = {
-  refreshBasket: () => void;
-};
+import BasketContext from './BasketContext';
 
-const Catalog: React.FC<CatalogProps> = ({ refreshBasket }) => {
+const Catalog = () => {
   const [phones, setPhones] = useState<Phone[]>([]);
+  const { refreshBasket } = useContext(BasketContext);
 
   useEffect(() => {
     phonesApi.getAll()
