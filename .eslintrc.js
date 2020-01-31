@@ -34,6 +34,7 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react/no-danger": "off",
 
+    "import/extensions": "off",
     "arrow-body-style": "off",
     "arrow-parens": "off"
   },
