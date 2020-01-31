@@ -6,7 +6,7 @@ export const get = async<T>(url: string): Promise<T> => {
   return response.json();
 };
 
-export const post = async(url: string, data: any) => {
+export const post = async(url: string, data: object) => {
   const response = await fetch(API_URL + url, {
     method: 'POST',
     body: JSON.stringify(data),

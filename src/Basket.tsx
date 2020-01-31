@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { useBasket } from './BasketHook';
+import { useBasket } from './BasketContext';
 
 const Basket = () => {
   const { basketItems, refreshBasket, removeItem } = useBasket();
