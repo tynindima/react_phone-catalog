@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 import * as phonesApi from './api/phones';
 import * as basketItemsApi from './api/basketItems';

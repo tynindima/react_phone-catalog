@@ -4,8 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 
+const baseName = process.env.REACT_APP_BASENAME || 'react_phone-catalog';
+
 ReactDOM.render(
-  <BrowserRouter basename="/react_phone-catalog">
+  <BrowserRouter basename={baseName}>
     <App />
   </BrowserRouter>,
   document.getElementById('root'),
