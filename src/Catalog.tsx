@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import * as phonesApi from './api/phones';
 import * as basketItemsApi from './api/basketItems';
 
-const Catalog = () => {
+type CatalogProps = {
+  refreshBasket: () => void;
+};
+
+const Catalog: React.FC<CatalogProps> = ({ refreshBasket }) => {
   const [phones, setPhones] = useState<Phone[]>([]);
 
   useEffect(() => {
@@ -12,8 +16,9 @@ const Catalog = () => {
       .then(setPhones);
   }, []);
 
-  const addToBasket = (phoneId: string) => {
-    basketItemsApi.addItem(phoneId);
+  const addToBasket = async(phoneId: string) => {
+    await basketItemsApi.addItem(phoneId);
+    refreshBasket();
   };
 
   return (
