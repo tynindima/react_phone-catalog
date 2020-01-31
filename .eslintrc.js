@@ -1,5 +1,7 @@
 module.exports = {
+  "parser": "@typescript-eslint/parser",
   "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "@mate-academy/eslint-config-react",
   ],
@@ -30,6 +32,9 @@ module.exports = {
     "react/prop-types": "off", // Incompatible with TS props type?
     "react-hooks/rules-of-hooks": "error",
     "react/no-danger": "off",
+
+    "arrow-body-style": "off",
+    "arrow-parens": "off"
   },
   "settings": {
     "import/resolver": {

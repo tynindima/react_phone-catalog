@@ -1,45 +1,48 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line max-len
-const API_URL = 'https://mate-academy.github.io/phone-catalogue-static/api/phones.json';
-
-interface IPhone {
-  id: string;
-  name: string;
-  age: number;
-  imageUrl: string;
-  snippet: string;
-}
+import * as phonesApi from './api/phones';
+import * as basketItemsApi from './api/basketItems';
 
 const Catalog = () => {
-  const [phones, setPhones] = useState([]);
+  const [phones, setPhones] = useState<Phone[]>([]);
 
   useEffect(() => {
-    fetch(API_URL)
-      .then(response => response.json())
+    phonesApi.getAll()
       .then(setPhones);
   }, []);
+
+  const addToBasket = (phoneId: string) => {
+    basketItemsApi.addItem(phoneId);
+  };
 
   return (
     <>
       <h1>Phone catalog</h1>
 
       <ul className="phones">
-        {phones.map((phone: IPhone) => (
-          <li className="thumbnail">
-            <a href={`#!/phones/${phone.id}`} className="thumb">
-              <img alt={phone.name} src={phone.imageUrl} />
-            </a>
+        {phones.map((phone: Phone) => (
+          <li className="thumbnail" key={phone.id}>
+            <Link to={`/phones/${phone.id}`} className="thumb">
+              <img
+                alt={phone.name}
+                src={phone.imageUrl}
+              />
+            </Link>
 
             <div className="phones__btn-buy-wrapper">
-              <button type="button" className="btn btn-success">
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={() => addToBasket(phone.id)}
+              >
                 Add
               </button>
             </div>
 
-            <a href={`#!/phones/${phone.id}`}>
+            <Link to={`/phones/${phone.id}`}>
               {phone.name}
-            </a>
+            </Link>
 
             <p>{phone.snippet}</p>
           </li>
