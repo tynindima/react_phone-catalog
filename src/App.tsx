@@ -12,7 +12,7 @@ const App = () => (
   <BasketContextContainer>
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-3">
+        <div className="col-lg-2 col-md-3 col-sm-4">
           <section>
             <h2>Filter</h2>
 
@@ -33,7 +33,7 @@ const App = () => (
           <Basket />
         </div>
 
-        <div className="col-sm-9">
+        <div className="col-lg-10 col-md-9 col-sm-8">
           <Switch>
             <Route path="/phones" exact component={Catalog} />
             <Route path="/phones/:phoneId" component={Details} />

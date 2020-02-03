@@ -1,11 +1,20 @@
 import React, { useContext, useEffect } from 'react';
 
 import { BasketContext } from './BasketContext';
+import * as basketItemsApi from './api/basketItems';
 
 const Basket = () => {
-  const { basketItems, refreshBasket, removeItem } = useContext(BasketContext);
+  const { basketItems, refreshBasket } = useContext(BasketContext);
 
   useEffect(refreshBasket, []);
+
+  const removeItem = async(itemId: string) => {
+    const isDeleted = await basketItemsApi.removeItem(itemId);
+
+    if (isDeleted) {
+      refreshBasket();
+    }
+  };
 
   return (
     <section>
@@ -13,7 +22,7 @@ const Basket = () => {
 
       {basketItems.length > 0 ? (
         <ul>
-          {basketItems.map((item) => (
+          {basketItems.map(item => (
             <li key={item}>
               <button
                 type="button"

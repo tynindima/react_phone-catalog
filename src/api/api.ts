@@ -17,3 +17,11 @@ export const post = async(url: string, data: object) => {
 
   return response.json();
 };
+
+export const remove = async(url: string) => {
+  const response = await fetch(API_URL + url, {
+    method: 'DELETE',
+  });
+
+  return response.json();
+};
