@@ -1,4 +1,4 @@
-const API_URL = 'https://phone-catalog-api.herokuapp.com';
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const get = async<T>(url: string): Promise<T> => {
   const response = await fetch(API_URL + url);
