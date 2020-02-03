@@ -1,7 +1,15 @@
-import * as api from './api';
+import api from './api';
 
 const BASE_URL = '/phones';
 
-export const getAll = () => api.get<Phone[]>(BASE_URL);
+export const getAll = async() => {
+  const response = await api.get<Phone[]>(BASE_URL);
 
-export const getById = (phoneId: number | string) => api.get<TPhoneDetails>(`${BASE_URL}/${phoneId}`);
+  return response.data;
+};
+
+export const getById = async(phoneId: number | string) => {
+  const response = await api.get<TPhoneDetails>(`${BASE_URL}/${phoneId}`);
+
+  return response.data;
+};

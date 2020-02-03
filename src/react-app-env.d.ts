@@ -15,4 +15,7 @@ type TPhoneDetails = {
   description: string;
 }
 
-type BasketItem = string;
+type BasketItem = {
+  id: string;
+  count: number;
+};

@@ -16,6 +16,12 @@ const Basket = () => {
     }
   };
 
+  const setCount = async(itemId: string, count: number) => {
+    await basketItemsApi.setCount(itemId, count);
+
+    refreshBasket();
+  };
+
   return (
     <section>
       <h2>Shopping Cart</h2>
@@ -23,15 +29,29 @@ const Basket = () => {
       {basketItems.length > 0 ? (
         <ul>
           {basketItems.map(item => (
-            <li key={item}>
+            <li key={item.id}>
               <button
                 type="button"
-                onClick={() => removeItem(item)}
+                onClick={() => removeItem(item.id)}
               >
                 x
               </button>
 
-              <b>{item}</b>
+              <b>{item.id}</b>
+
+              <button
+                type="button"
+                onClick={() => setCount(item.id, item.count - 1)}
+              >
+                -
+              </button>
+              {item.count}
+              <button
+                type="button"
+                onClick={() => setCount(item.id, item.count + 1)}
+              >
+                +
+              </button>
             </li>
           ))}
         </ul>
