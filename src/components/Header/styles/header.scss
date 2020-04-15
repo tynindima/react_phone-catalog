@@ -1,0 +1,26 @@
+@import "logo";
+@import "list-menu";
+@import "vars";
+@import "search";
+@import "emblem-box";
+
+.header {
+  height: 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $white-color;
+  box-shadow: 0 1px 0 $elements-color;
+  display: flex;
+  justify-content: space-between;
+
+  &__search-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: 24px;
+    margin-right: 42px;
+  }
+
+}

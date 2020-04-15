@@ -1,0 +1,9 @@
+@import "vars";
+
+.emblem-box {
+  width: 64px;
+  height: 64px;
+  box-shadow: -1px 0 0 $elements-color;
+  cursor: pointer;
+}
+

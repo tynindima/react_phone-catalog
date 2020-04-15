@@ -1,0 +1,44 @@
+@import "vars";
+
+%background-positions {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.search {
+  width: 327px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: -1px 0 0 $elements-color;
+
+  &__input {
+    height: 18px;
+    margin-left: 24px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: $icons-color;
+  }
+
+  &__input::placeholder {
+    font-weight: 600;
+    color: $icons-color;
+  }
+
+  &__img {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    margin-right: 24px;
+    border: none;
+    background-image: url("../img/search.svg");
+    @extend %background-positions;
+    cursor: pointer;
+  }
+
+}
