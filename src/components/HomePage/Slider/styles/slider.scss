@@ -1,7 +1,43 @@
+@import "vars";
+
 .slider {
+  position: relative;
   display: flex;
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  align-items: center;
+  margin-bottom: 82px;
+
+  &__view {
+
+    width: 1040px;
+    height: 400px;
+    margin: 0 16px;
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  &__slide {
+    min-width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    overflow: hidden;
+  }
 
   &__buttons {
-    height: 40px;
+    width: 32px;
+    height: 400px;
+    border: 1px solid $icons-color;
+    box-sizing: border-box;
+    outline: none;
+    background-color: $white-color;
+    cursor: pointer;
+  }
+
+  &__buttons:hover {
+    border: 1px solid $primary-color;
   }
 }

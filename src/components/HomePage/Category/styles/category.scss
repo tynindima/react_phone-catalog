@@ -1,0 +1,19 @@
+@import "vars";
+@import "phones";
+
+.category {
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    color: $primary-color;
+  }
+
+  &__container {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 16px;
+  }
+}

@@ -1,0 +1,27 @@
+@import "vars";
+
+.phones {
+  max-width: 368px;
+  max-height: 443px;
+
+  &__img {
+    //width: 368px;
+    //height: 368px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: $primary-color;
+  }
+
+  &__text {
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $secondary-color;
+  }
+}
