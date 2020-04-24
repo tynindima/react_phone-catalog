@@ -1,22 +1,36 @@
 {
   "files": {
-    "main.css": "./static/css/main.ac216876.chunk.css",
-    "main.js": "./static/js/main.a217cee5.chunk.js",
-    "main.js.map": "./static/js/main.a217cee5.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.0cc93d7a.js",
-    "runtime-main.js.map": "./static/js/runtime-main.0cc93d7a.js.map",
-    "static/js/2.47792c4a.chunk.js": "./static/js/2.47792c4a.chunk.js",
-    "static/js/2.47792c4a.chunk.js.map": "./static/js/2.47792c4a.chunk.js.map",
+    "main.css": "./static/css/main.167d11f5.chunk.css",
+    "main.js": "./static/js/main.e8e2990c.chunk.js",
+    "main.js.map": "./static/js/main.e8e2990c.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.d5470fb7.js",
+    "runtime-main.js.map": "./static/js/runtime-main.d5470fb7.js.map",
+    "static/js/2.4606b757.chunk.js": "./static/js/2.4606b757.chunk.js",
+    "static/js/2.4606b757.chunk.js.map": "./static/js/2.4606b757.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.4a2ef0b30c7009914e017dc16a3d7a52.js": "./precache-manifest.4a2ef0b30c7009914e017dc16a3d7a52.js",
+    "precache-manifest.8529a3620441af784e4739ab8d13f47d.js": "./precache-manifest.8529a3620441af784e4739ab8d13f47d.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.ac216876.chunk.css.map": "./static/css/main.ac216876.chunk.css.map",
-    "static/js/2.47792c4a.chunk.js.LICENSE": "./static/js/2.47792c4a.chunk.js.LICENSE"
+    "static/css/main.167d11f5.chunk.css.map": "./static/css/main.167d11f5.chunk.css.map",
+    "static/js/2.4606b757.chunk.js.LICENSE.txt": "./static/js/2.4606b757.chunk.js.LICENSE.txt",
+    "static/media/Apple.svg": "./static/media/Apple.e2c79ea5.svg",
+    "static/media/Banner1.png": "./static/media/Banner1.a178de2e.png",
+    "static/media/Drocher.svg": "./static/media/Drocher.b69a42d8.svg",
+    "static/media/Lexus.png": "./static/media/Lexus.ac82837d.png",
+    "static/media/App.scss": "./static/media/Mont-SemiBold.76ffaeaa.woff",
+    "static/media/Phones1.png": "./static/media/Phones1.22d5c0b1.png",
+    "static/media/Phones2.png": "./static/media/Phones2.c20ec296.png",
+    "static/media/Phones3.png": "./static/media/Phones3.699f70e2.png",
+    "static/media/bag.svg": "./static/media/bag.032a50cf.svg",
+    "static/media/heart.svg": "./static/media/heart.ba064880.svg",
+    "static/media/left.svg": "./static/media/left.5ca5c1f5.svg",
+    "static/media/lexus2.png": "./static/media/lexus2.d2db6778.png",
+    "static/media/right.svg": "./static/media/right.67be4a4a.svg",
+    "static/media/header.scss": "./static/media/search.3d4e9107.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0cc93d7a.js",
-    "static/js/2.47792c4a.chunk.js",
-    "static/css/main.ac216876.chunk.css",
-    "static/js/main.a217cee5.chunk.js"
+    "static/js/runtime-main.d5470fb7.js",
+    "static/js/2.4606b757.chunk.js",
+    "static/css/main.167d11f5.chunk.css",
+    "static/js/main.e8e2990c.chunk.js"
   ]
 }
