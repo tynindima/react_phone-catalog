@@ -1,0 +1,15 @@
+@import "vars";
+@import "product-card";
+
+.phonepage {
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 40px 152px;
+  color: $secondary-color;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

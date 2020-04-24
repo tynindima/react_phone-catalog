@@ -1,22 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { getPhones } from './getPhones';
+import './styles/phonepage.scss';
 
 export const PhonePage = (props: any) => {
   console.log(props.match.url);
+  const [phones, setPhones] = useState<Phone[]>([]);
+
+  useEffect(() => {
+    getPhones()
+      .then(phone => {
+        setPhones(phone);
+      });
+  }, []);
 
   return (
-    <div>
-      <h2>
-        PhonePage
-        {props.match.params.phoneId}
-      </h2>
-      <ul>
-        <li>
-          <Link to="/phone/1">Phone1</Link>
-        </li>
-        <li>
-          <Link to="/phone/2">Phone2</Link>
-        </li>
+    <div className="phonepage">
+      <ul className="phonepage__list">
+        {phones.map(phone => (
+          <li key={phone.id} className="product-card">
+            <img src={phone.imageUrl} alt="phone" />
+            <h3>{phone.name}</h3>
+            <p>{phone.snippet}</p>
+          </li>
+        ))}
       </ul>
     </div>
   );
